@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>To Do List</title>
+
+      <!-- Link Google Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap"
+         rel="stylesheet" />
+
+      <link rel="stylesheet" href="./assets/css/styles.css" />
+      <link rel="stylesheet" href="./assets/css/medias.css" />
+      <script src="./assets/js/scripts.js" defer></script>
+      <!-- Import do FontsAwesome -->
+      <script
+         src="https://kit.fontawesome.com/14a3126350.js"
+         crossorigin="anonymous"></script>
+   </head>
+   <body>
+      <main id="containerToDo">
+         <header id="headerToDo">
+            <h1>To Do List</h1>
+         </header>
+
+         <form id="toDoForm">
+            <label>Add Task</label>
+            <div class="formControl">
+               <input
+                  type="text"
+                  id="toDoInput"
+                  placeholder="Add a task"
+                  autocomplete="off" />
+               <button type="submit">
+                  <i class="fa-solid fa-plus"></i>
+               </button>
+            </div>
+         </form>
+
+         <form id="editForm" class="hideElement">
+            <div id="headerEditTask">
+               <label>Edit Task</label>
+               <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="formControl">
+               <input
+                  type="text"
+                  id="editInput"
+                  placeholder="Edit your Task"
+                  autocomplete="off" />
+               <button type="submit">
+                  <i class="fa-solid fa-check-double"></i>
+               </button>
+            </div>
+         </form>
+
+         <section id="toDoListContent">
+            <!-- 
+               Template
+               
+               <div class="toDoTasks done">
+               <h3>My Task</h3>
+               <div class="boxButtonsTasks">
+                  <button class="finishTask">
+                     <i class="fa-solid fa-check"></i>
+                  </button>
+                  <button class="editTask">
+                     <i class="fa-solid fa-pen"></i>
+                  </button>
+                  <button class="removeTask">
+                     <i class="fa-solid fa-xmark"></i>
+                  </button>
+               </div>
+            </div> -->
+         </section>
+      </main>
+   </body>
+</html>

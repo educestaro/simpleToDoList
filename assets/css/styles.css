@@ -1,0 +1,158 @@
+* {
+   font-family: 'Poppins', sans-serif;
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+body {
+   display: flex;
+   justify-content: center;
+   padding-top: 5rem;
+   background-color: rgb(212, 212, 212);
+}
+
+/* Container ToDo */
+#containerToDo {
+   background-color: rgb(255, 255, 255);
+   padding: 20px;
+   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+   width: 400px;
+}
+
+/* Header ToDo */
+#headerToDo {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-bottom: 10px;
+   border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+#headerToDo h1 {
+   font-size: 30px;
+   font-weight: 550;
+}
+
+/* Content Forms */
+.formControl {
+   display: flex;
+   align-items: center;
+   height: 40px;
+   position: relative;
+   border: 1px solid rgba(0, 0, 0, 0.2);
+   margin-bottom: 15px;
+   transition: 0.3s;
+}
+.formControl:focus-within,
+#searchTask form:focus-within {
+   border: 1px solid rgb(139, 139, 139);
+   transition: 0.3s;
+}
+
+.formControl input {
+   height: 100%;
+   width: 100%;
+   padding: 10px;
+   font-size: 14px;
+   border: none;
+   outline: none;
+}
+#toDoForm label,
+#editForm label {
+   font-size: 15px;
+   color: #000;
+   font-weight: 500;
+}
+.formControl button {
+   width: 50px;
+   font-size: 15px;
+   height: 100%;
+   border: none;
+   cursor: pointer;
+   transition: 0.2s;
+   border-left: 1px solid rgb(139, 139, 139);
+   background-color: rgb(83, 0, 160);
+   color: rgb(236, 236, 236);
+}
+
+.formControl button:hover {
+   background-color: rgb(60, 0, 116);
+   transition: 0.2s;
+}
+
+/* Edit form */
+#headerEditTask {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+#headerEditTask label {
+   margin-bottom: -10px;
+}
+#headerEditTask i {
+   margin-bottom: 20px;
+   font-size: 20px;
+}
+.hideElement,
+#toDoListContent.hideElement {
+   display: none;
+}
+
+/* ToDo tasks Content */
+#toDoListContent {
+   display: flex;
+   flex-direction: column;
+   gap: 3px;
+   width: 100%;
+   height: 70px;
+   overflow-y: auto;
+   scroll-behavior: smooth;
+   padding-right: 5px;
+}
+#toDoListContent .toDoTasks {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 5px 10px;
+   width: 100%;
+   min-height: 50px;
+   background-color: rgb(235, 235, 235);
+}
+#toDoListContent .toDoTasks h3 {
+   text-align: justify;
+   font-size: 14px;
+   font-weight: 500;
+   color: #000;
+}
+.boxButtonsTasks {
+   display: flex;
+   align-items: center;
+   gap: 4px;
+   margin-left: 10px;
+}
+.boxButtonsTasks button {
+   padding: 5px;
+   border-radius: 2px;
+   border: none;
+   width: 33px;
+   font-size: 14px;
+   cursor: pointer;
+   border: 1px solid rgba(0, 0, 0, 0.4);
+   background-color: #fff;
+   transition: 0.2s;
+}
+.boxButtonsTasks button i {
+   pointer-events: none;
+}
+.boxButtonsTasks button:hover {
+   transform: scale(0.96);
+   transition: 0.2s;
+}
+#toDoListContent .done {
+   background-color: rgb(65, 0, 126);
+}
+#toDoListContent .done h3 {
+   text-decoration: line-through;
+   font-style: italic;
+   color: #fff;
+}
